@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+new_calc:
+  path: /calc/new
+  controller: App\Controller\CalculatorController::calc
+  methods: POST
+
+load_history:
+  path: /calc/load
+  controller: App\Controller\CalculatorController::getResults
+  methods: GET
+  defaults:
+    limit: null
